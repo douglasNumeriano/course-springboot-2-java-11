@@ -21,6 +21,7 @@ public class User implements Serializable {
     private String phone;
     private String password;
 
+//   @JsonIgnore: Está anotação é usada para bloquear a busca de objetos dos dois lados de uma depedência de dados e acabar estourando a memória
     @JsonIgnore
     @OneToMany(mappedBy = "client")
     private List<Order> orders = new ArrayList<>();
