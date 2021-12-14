@@ -21,6 +21,7 @@ public class User implements Serializable {
     private String phone;
     private String password;
 
+//   @OneToMany(mappedBy = "client"): meapeadio pelo atributo client na classe Order
 //   @JsonIgnore: Está anotação é usada para bloquear a busca de objetos dos dois lados de uma depedência de dados e acabar estourando a memória
     @JsonIgnore
     @OneToMany(mappedBy = "client")
